@@ -1,0 +1,206 @@
+---
+layout: default
+---
+
+<!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
+  <div class="absolute inset-0 z-0">
+	<img src="[https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000](https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000)" alt="Background" class="w-full h-full object-cover opacity-10">
+	<div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-50"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10 text-center md:text-left md:flex md:items-center md:justify-between">
+	<div class="md:w-3/5 space-y-6">
+	  <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+		Civic Tech Entrepreneur
+	  </div>
+	  <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-slate-900">
+		{{ site.data.portfolio.hero.title }}
+	  </h1>
+	  <p class="text-xl md:text-2xl text-slate-600 font-medium">
+		{{ site.data.portfolio.hero.subtitle }}
+	  </p>
+	  <p class="text-slate-500 leading-relaxed max-w-lg">
+		{{ site.data.portfolio.hero.description }}
+	  </p>
+	  <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+		<a href="#works" class="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200">
+		  実績を見る
+		</a>
+		<a href="#contact" class="px-8 py-3 bg-white text-slate-700 border border-slate-200 rounded-lg font-semibold hover:bg-slate-50 transition-colors">
+		  お問い合わせ
+		</a>
+	  </div>
+	</div>
+	
+	<!-- Profile Image Area -->
+	<div class="hidden md:block md:w-2/5 mt-12 md:mt-0 relative">
+	  <div class="relative w-80 h-80 mx-auto">
+		<div class="absolute inset-0 bg-teal-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+		<img src="[https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800](https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800)" class="relative w-full h-full object-cover rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 border-4 border-white">
+	  </div>
+	</div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+	<div class="flex flex-col md:flex-row gap-16">
+	  <div class="md:w-1/3 space-y-8">
+		<div>
+		  <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+			<span class="w-8 h-1 bg-blue-600 block"></span> About Me
+		  </h2>
+		  <p class="text-slate-600 leading-relaxed">
+			{{ site.data.portfolio.profile.bio }}
+		  </p>
+		</div>
+		<div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+		  <h3 class="font-bold text-lg mb-4 text-slate-800">Personal & Hobbies</h3>
+		  <div class="flex flex-wrap gap-2">
+			{% for hobby in site.data.portfolio.profile.hobbies %}
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-sm">
+			  #{{ hobby }}
+			</span>
+			{% endfor %}
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="md:w-2/3">
+		<h3 class="text-2xl font-bold mb-8 text-slate-800">Biography</h3>
+		<div class="space-y-8 pl-4 border-l-2 border-slate-100">
+		  {% for item in site.data.portfolio.profile.history %}
+		  <div class="relative pl-8 group">
+			<div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			<span class="text-sm font-bold text-blue-600 mb-1 block">{{ item.year }}</span>
+			<h4 class="text-xl font-bold text-slate-800 mb-2">{{ item.title }}</h4>
+			<p class="text-slate-600">{{ item.desc }}</p>
+		  </div>
+		  {% endfor %}
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+<!-- Works Section -->
+<section id="works" class="py-20 bg-slate-50">
+  <div class="container mx-auto px-6">
+	<div class="text-center mb-12">
+	  <h2 class="text-3xl font-bold mb-4">Selected Works</h2>
+	  <p class="text-slate-500">これまでの取り組みとプロジェクト</p>
+	</div>
+
+	<!-- Filter Buttons -->
+	<div class="flex justify-center gap-4 mb-12 flex-wrap" id="work-filters">
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-slate-800 text-white shadow-lg" data-filter="all">All</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="business">Business</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="community">Community</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="dev">Personal Dev</button>
+	</div>
+
+	<!-- Works Grid -->
+	<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+	  {% for work in site.data.portfolio.works %}
+	  <div class="work-item group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-category="{{ work.category }}">
+		<div class="relative h-48 overflow-hidden">
+		  <div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+		  <img src="{{ work.image }}" alt="{{ work.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		</div>
+		<div class="p-6">
+		  <div class="flex justify-between items-start mb-2">
+			<span class="text-xs font-bold text-blue-600 uppercase tracking-wide">{{ work.category }}</span>
+			<i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-500"></i>
+		  </div>
+		  <h3 className="text-xl font-bold text-slate-800 mb-2">{{ work.title }}</h3>
+		  <p class="text-slate-600 text-sm mb-4 line-clamp-3">{{ work.description }}</p>
+		  <div class="flex flex-wrap gap-2 mt-auto">
+			{% for tag in work.tags %}
+			<span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">{{ tag }}</span>
+			{% endfor %}
+		  </div>
+		</div>
+	  </div>
+	  {% endfor %}
+	</div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+	<div class="text-center mb-16">
+	  <h2 class="text-3xl font-bold mb-4">Services</h2>
+	  <p class="text-slate-500">技術と知識を活用し、以下の領域でお手伝いできます。</p>
+	</div>
+
+	<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+	  {% for service in site.data.portfolio.services %}
+	  <div class="p-6 rounded-xl border border-slate-100 hover:border-blue-100 hover:bg-blue-50/30 transition-colors">
+		<div class="mb-4 p-3 bg-slate-50 rounded-lg inline-block text-blue-600">
+		  <i data-lucide="{{ service.icon }}" class="w-8 h-8"></i>
+		</div>
+		<h3 class="text-lg font-bold text-slate-800 mb-2">{{ service.title }}</h3>
+		<p class="text-slate-600 text-sm leading-relaxed">
+		  {{ service.desc }}
+		</p>
+	  </div>
+	  {% endfor %}
+	</div>
+  </div>
+</section>
+
+<!-- Media Section -->
+<section id="media" class="py-20 bg-slate-50">
+  <div class="container mx-auto px-6 max-w-4xl">
+	<h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
+	  <i data-lucide="newspaper"></i> Media Coverage
+	</h2>
+	<div class="bg-white rounded-xl shadow-sm border border-slate-100 divide-y divide-slate-100">
+	  {% for item in site.data.portfolio.media %}
+	  <div class="p-6 flex flex-col md:flex-row md:items-center gap-2 md:gap-6 hover:bg-slate-50 transition-colors">
+		<span class="text-slate-400 font-mono text-sm">{{ item.date }}</span>
+		<span class="inline-block px-2 py-1 bg-slate-100 text-xs font-semibold text-slate-600 rounded">{{ item.media }}</span>
+		<h4 class="flex-1 font-medium text-slate-800">{{ item.title }}</h4>
+	  </div>
+	  {% endfor %}
+	</div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-slate-900 text-white">
+  <div class="container mx-auto px-6">
+	<div class="grid md:grid-cols-2 gap-12 items-center">
+	  <div>
+		<h2 class="text-3xl font-bold mb-6">Contact</h2>
+		<p class="text-slate-400 mb-8 leading-relaxed">
+		  お仕事のご依頼、講演の相談などお気軽にご連絡ください。<br>
+		  通常2営業日以内に返信いたします。
+		</p>
+		<div class="space-y-4">
+		  <a href="#" class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
+			<i data-lucide="mail" class="w-5 h-5"></i>
+			<span>hello@example.com</span>
+		  </a>
+		  <div class="flex gap-4 mt-8">
+			<a href="#" class="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+			<a href="#" class="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
+			<a href="#" class="p-3 bg-slate-800 rounded-full hover:bg-blue-700 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+		  </div>
+		</div>
+	  </div>
+	  <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+		<!-- フォーム実装にはFormspreeなどが便利です -->
+		<form class="space-y-4">
+		  <input type="text" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お名前">
+		  <input type="email" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="メールアドレス">
+		  <textarea rows="4" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お問い合わせ内容"></textarea>
+		  <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-lg shadow-lg">送信する</button>
+		</form>
+	  </div>
+	</div>
+  </div>
+</section>
