@@ -1,0 +1,47 @@
+---
+layout: default
+title: "Works"
+---
+
+<section class="pt-28 pb-16 bg-white">
+  <div class="container mx-auto px-6">
+	<div class="flex items-start justify-between gap-4 mb-8">
+	  <div>
+		<p class="text-sm uppercase tracking-[0.25em] text-blue-600 font-semibold mb-2">Works</p>
+		<h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">これまでのプロジェクト</h1>
+		<p class="text-slate-500 mt-2">カテゴリやタグで多様な取り組みをまとめています。</p>
+	  </div>
+	  <a href="{{ '/' | relative_url }}#works" class="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors">
+		<i data-lucide="arrow-left" class="w-4 h-4"></i> トップへ戻る
+	  </a>
+	</div>
+
+	{% assign works = site.works | sort: "order" %}
+	<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+	  {% for work in works %}
+	  {% assign summary = work.excerpt | strip_html | default: work.content | markdownify | strip_html %}
+	  <div class="group bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+		<a href="{{ work.url | relative_url }}" class="block h-full">
+		  <div class="relative h-48 overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+			<img src="{{ work.image }}" alt="{{ work.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		  </div>
+		  <div class="p-6 space-y-3">
+			<div class="flex justify-between items-start">
+			  <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">{{ work.category }}</span>
+			  <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-500"></i>
+			</div>
+			<h3 class="text-xl font-bold text-slate-900">{{ work.title }}</h3>
+			<p class="text-sm text-slate-600 line-clamp-3">{{ summary | truncate: 110, "…" }}</p>
+			<div class="flex flex-wrap gap-2 pt-2">
+			  {% for tag in work.tags %}
+			  <span class="text-xs px-2 py-1 bg-white text-slate-600 border border-slate-200 rounded">{{ tag }}</span>
+			  {% endfor %}
+			</div>
+		  </div>
+		</a>
+	  </div>
+	  {% endfor %}
+	</div>
+  </div>
+</section>

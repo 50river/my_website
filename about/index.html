@@ -1,0 +1,82 @@
+---
+layout: default
+title: "About"
+---
+
+<section class="pt-28 pb-16 bg-white">
+  <div class="container mx-auto px-6 max-w-5xl">
+	<div class="grid md:grid-cols-3 gap-10 items-start">
+	  <div class="md:col-span-1 space-y-6">
+		<p class="text-sm uppercase tracking-[0.25em] text-blue-600 font-semibold">About Me</p>
+		<h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">地方議会DXを推進するシビックテック起業家</h1>
+		<p class="text-slate-600 leading-relaxed">{{ site.data.portfolio.profile.bio }}</p>
+
+		<div class="bg-slate-50 border border-slate-100 rounded-xl p-5">
+		  <h3 class="text-sm font-bold text-slate-800 mb-3">Hobbies</h3>
+		  <div class="flex flex-wrap gap-2">
+			{% for hobby in site.data.portfolio.profile.hobbies %}
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-xs">{{ hobby }}</span>
+			{% endfor %}
+		  </div>
+		</div>
+
+		<a href="{{ '/#contact' | relative_url }}" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:gap-3 transition-all">
+		  お問い合わせへ
+		  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+		</a>
+	  </div>
+
+	  <div class="md:col-span-2 space-y-10">
+		<div>
+		  <h2 class="text-xl font-bold text-slate-900 mb-4">Biography</h2>
+		  <div class="space-y-8 pl-4 border-l-2 border-slate-100">
+			{% for item in site.data.portfolio.profile.history %}
+			<div class="relative pl-8 group">
+			  <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			  <span class="text-sm font-bold text-blue-600 mb-1 block">{{ item.year }}</span>
+			  <h3 class="text-lg font-bold text-slate-800 mb-1">{{ item.title }}</h3>
+			  <p class="text-slate-600">{{ item.desc }}</p>
+			</div>
+			{% endfor %}
+		  </div>
+		</div>
+
+		<div class="grid md:grid-cols-2 gap-6">
+		  <div class="bg-slate-50 border border-slate-100 rounded-xl p-6">
+			<h3 class="text-lg font-bold text-slate-900 mb-3">ミッション</h3>
+			<p class="text-slate-600 text-sm leading-relaxed">
+			  テクノロジーと対話で行政の透明性を高め、地域の意思決定をアップデートすること。
+			</p>
+		  </div>
+		  <div class="bg-slate-50 border border-slate-100 rounded-xl p-6">
+			<h3 class="text-lg font-bold text-slate-900 mb-3">現在の取り組み</h3>
+			<p class="text-slate-600 text-sm leading-relaxed">
+			  議会録検索SaaS「Semukan」の開発運営を軸に、自治体向け生成AI活用やオープンデータ推進を伴走支援しています。
+			</p>
+		  </div>
+		</div>
+
+		<div class="bg-blue-50 border border-blue-100 rounded-2xl p-6">
+		  <h3 class="text-lg font-bold text-slate-900 mb-2">最近のメディア掲載・登壇</h3>
+		  {% assign media_items = site.media | sort: "date" | reverse | slice: 0, 3 %}
+		  <div class="divide-y divide-blue-100">
+			{% for item in media_items %}
+			<a href="{{ item.url | relative_url }}" class="flex items-center gap-3 py-3 hover:text-blue-700 transition-colors">
+			  <span class="text-xs font-mono text-slate-500">{{ item.date | date: "%Y.%m.%d" }}</span>
+			  <span class="text-xs px-2 py-1 bg-white text-slate-600 rounded border border-blue-100">{{ item.media }}</span>
+			  <span class="text-sm font-semibold text-slate-800">{{ item.title }}</span>
+			  <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+			</a>
+			{% endfor %}
+		  </div>
+		  <div class="mt-4">
+			<a href="{{ '/media/' | relative_url }}" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:gap-3 transition-all">
+			  もっと見る
+			  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+			</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>

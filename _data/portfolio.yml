@@ -7,82 +7,27 @@ hero:
 
 profile:
   bio: "石川県金沢市出身。大学在学中よりプログラミングを学び、シビックテック活動に従事。現在は「テクノロジーで行政の透明性を高める」をミッションに、スタートアップを経営。週末はハッカソンのメンターやAI勉強会の主催も行う。"
-  hobbies: 
-	- "サウナ巡り"
-	- "ガジェット収集"
-	- "SF小説"
-	- "深夜のコーディング"
+  hobbies:
+    - "サウナ巡り"
+    - "ガジェット収集"
+    - "SF小説"
+    - "深夜のコーディング"
   history:
-	- year: "2018"
-	  title: "エンジニアとしてのキャリアを開始"
-	  desc: "都内IT企業にてWebアプリケーション開発に従事。"
-	- year: "2020"
-	  title: "シビックテック活動を開始"
-	  desc: "Code for Kanazawa等に参加し、オープンデータ活用アプリを開発。"
-	- year: "2022"
-	  title: "株式会社設立 & Semukanリリース"
-	  desc: "地方議会会議録検索サービス「Semukan」をローンチ。"
-	- year: "2024"
-	  title: "生成AI活用支援事業を開始"
-	  desc: "自治体向けRAG構築や業務効率化の支援を展開。"
-
-works:
-  - id: 1
-	title: "Semukan（セムカン）"
-	category: "business"
-	image: "[https://images.unsplash.com/photo-1577416412292-764030783362?auto=format&fit=crop&q=80&w=800](https://images.unsplash.com/photo-1577416412292-764030783362?auto=format&fit=crop&q=80&w=800)"
-	description: "地方議会の会議録を横断検索・可視化するSaaS。発言内容の分析やトレンド抽出が可能。"
-	tags: ["React", "Python", "Elasticsearch", "SaaS"]
-  
-  - id: 2
-	title: "地域AI勉強会コミュニティ"
-	category: "community"
-	image: "[https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800](https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800)"
-	description: "月1回開催のAI技術勉強会。初心者からエンジニアまで参加し、最新技術のキャッチアップを行う。"
-	tags: ["Community", "Generative AI", "Workshop"]
-
-  - id: 3
-	title: "Civic Map Maker"
-	category: "dev"
-	image: "[https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=800](https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=800)"
-	description: "自治体のオープンデータ（CSV）を読み込み、即座にマップとして可視化するWebアプリ。"
-	tags: ["Next.js", "Mapbox", "Open Data"]
-
-  - id: 4
-	title: "議会答弁生成RAG"
-	category: "dev"
-	image: "[https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800](https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800)"
-	description: "過去の議事録を学習させ、議員の質問に対する回答案をドラフトするプロトタイプ。"
-	tags: ["LLM", "LangChain", "Vector DB"]
-
-  - id: 5
-	title: "コワーキングスペース運営"
-	category: "community"
-	image: "[https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800](https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800)"
-	description: "エンジニアやクリエイターが集まる地域の拠点を運営・コミュニティマネジメント。"
-	tags: ["Management", "Event", "Local"]
+    - year: "2018"
+      title: "エンジニアとしてのキャリアを開始"
+      desc: "都内IT企業にてWebアプリケーション開発に従事。"
+    - year: "2020"
+      title: "シビックテック活動を開始"
+      desc: "Code for Kanazawa等に参加し、オープンデータ活用アプリを開発。"
+    - year: "2022"
+      title: "株式会社設立 & Semukanリリース"
+      desc: "地方議会会議録検索サービス「Semukan」をローンチ。"
+    - year: "2024"
+      title: "生成AI活用支援事業を開始"
+      desc: "自治体向けRAG構築や業務効率化の支援を展開。"
 
 services:
-  - title: "DX・SaaS導入支援"
-	icon: "building-2" # Lucide icon name
-	desc: "自治体や中小企業向けの業務効率化ツールの選定・導入から定着までを伴走支援します。"
-  - title: "プロトタイプ開発"
-	icon: "code"
-	desc: "新規事業のPoCや、社内ツールのMVP開発。Webアプリから生成AI活用システムまで対応。"
-  - title: "情報公開・データ整備"
-	icon: "database"
-	desc: "オープンデータの整備や、行政情報の可視化ダッシュボード構築のコンサルティング。"
-  - title: "講演・ワークショップ"
-	icon: "mic"
-	desc: "「シビックテック」「生成AI活用」「地方創生」などをテーマにした講演やハンズオン。"
+  [] # servicesはコレクションに移行
 
 media:
-  - date: "2024.10"
-	media: "TechCrunch Japan"
-	title: "地方から変える行政DXの未来特集にてSemukanが紹介されました"
-  - date: "2024.08"
-	media: "日経新聞 地域版"
-	title: "注目の若手起業家インタビュー掲載"
-  - date: "2024.05"
-	media: "Public Sector Tech Summit"
-	title: "「開かれた議会とテクノロジー」登壇"
+  [] # mediaはコレクションに移行

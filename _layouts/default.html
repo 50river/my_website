@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
-  <!-- Tailwind CSS (Play CDN for simple setup) -->
-  <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+  <!-- Tailwind CSS (Play CDN for簡易読み込み) -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
-  <script src="[https://unpkg.com/lucide@latest](https://unpkg.com/lucide@latest)"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
+	html { font-size: 15px; }
 	/* Custom styles if needed */
 	.fade-in { animation: fadeIn 0.5s ease-in; }
 	@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -17,20 +18,20 @@
 <body class="bg-slate-50 font-sans text-slate-800">
 
   <!-- Navigation -->
-  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 bg-transparent">
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
 	<div class="container mx-auto px-6 flex justify-between items-center">
-	  <a href="#home" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+	  <a href="{{ '/' | relative_url }}#home" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
 		Portfolio.
 	  </a>
 	  
 	  <!-- Desktop Menu -->
 	  <div class="hidden md:flex space-x-8">
-		<a href="#home" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Home</a>
-		<a href="#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About</a>
-		<a href="#works" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Works</a>
-		<a href="#services" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Services</a>
-		<a href="#media" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Media</a>
-		<a href="#contact" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+		<a href="{{ '/' | relative_url }}#home" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Top</a>
+		<a href="{{ '/' | relative_url }}#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About</a>
+		<a href="{{ '/' | relative_url }}#works" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Works</a>
+		<a href="{{ '/' | relative_url }}#services" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Services</a>
+		<a href="{{ '/' | relative_url }}#media" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Media</a>
+		<a href="{{ '/' | relative_url }}#contact" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
 	  </div>
 
 	  <!-- Mobile Menu Button -->
@@ -42,12 +43,12 @@
 	<!-- Mobile Menu -->
 	<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
 	  <div class="px-6 py-4 flex flex-col space-y-4">
-		<a href="#home" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Home</a>
-		<a href="#about" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">About</a>
-		<a href="#works" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Works</a>
-		<a href="#services" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Services</a>
-		<a href="#media" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Media</a>
-		<a href="#contact" class="mobile-link text-slate-600 font-medium py-2">Contact</a>
+		<a href="{{ '/' | relative_url }}#home" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Top</a>
+		<a href="{{ '/' | relative_url }}#about" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">About</a>
+		<a href="{{ '/' | relative_url }}#works" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Works</a>
+		<a href="{{ '/' | relative_url }}#services" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Services</a>
+		<a href="{{ '/' | relative_url }}#media" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Media</a>
+		<a href="{{ '/' | relative_url }}#contact" class="mobile-link text-slate-600 font-medium py-2">Contact</a>
 	  </div>
 	</div>
   </nav>

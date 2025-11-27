@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<section class="pt-28 pb-16 bg-white">
+  <div class="container mx-auto px-6">
+	<div class="max-w-4xl mx-auto">
+	  <div class="mb-6 flex items-center gap-3 text-sm text-slate-500">
+		<a href="{{ '/' | relative_url }}#media" class="hover:text-blue-600 transition-colors flex items-center gap-1">
+		  <i data-lucide="arrow-left" class="w-4 h-4"></i>
+		  Back to Media
+		</a>
+		<span class="text-slate-300">/</span>
+		<span class="font-semibold text-blue-600">{{ page.media }}</span>
+	  </div>
+
+	  <article class="bg-slate-50 border border-slate-100 rounded-2xl shadow-sm overflow-hidden">
+		<div class="px-8 pt-8 pb-4">
+		  <p class="text-xs uppercase tracking-[0.2em] text-blue-600 font-semibold mb-2">{{ page.media }}</p>
+		  <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-3">{{ page.title }}</h1>
+		  <p class="text-slate-500 text-sm">{{ page.date | date: "%Y.%m.%d" }}</p>
+		</div>
+		{% if page.cover %}
+		<div class="relative h-64 overflow-hidden">
+		  <img src="{{ page.cover }}" alt="{{ page.title }}" class="w-full h-full object-cover">
+		  <div class="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
+		</div>
+		{% endif %}
+		<div class="px-8 py-8 prose prose-slate prose-lg max-w-none">
+		  {{ content }}
+		</div>
+		<div class="px-8 pb-8 flex flex-wrap gap-3">
+		  <a href="{{ '/' | relative_url }}#contact" class="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:gap-3 transition-all">
+			取材・講演の依頼をする
+			<i data-lucide="arrow-right" class="w-4 h-4"></i>
+		  </a>
+		</div>
+	  </article>
+	</div>
+  </div>
+</section>
