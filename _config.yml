@@ -1,8 +1,8 @@
 # _config.yml
 title: Civic Tech Portfolio
 description: 地方議会DXを推進するシビックテック起業家のポートフォリオ
-url: "https://example.com" # 自分のURLに変更
-baseurl: ""
+url: "https://50river.github.io" # GitHub Pagesの公開URL
+baseurl: "/my_website" # リポジトリ名を指定
 
 plugins:
   - jekyll-seo-tag
