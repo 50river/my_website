@@ -2,44 +2,41 @@ name: Build and Deploy Jekyll
 
 on:
   push:
-	branches:
-	  - main   # ← mainにpushされたら動く
+    branches:
+      - main
 
 jobs:
   build-and-deploy:
-	runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-	permissions:
-	  contents: write   # gh-pagesブランチにpushするのに必要
+    permissions:
+      contents: write   # gh-pages に push するために必要
 
-	steps:
-	  - name: Checkout source
-		uses: actions/checkout@v4
-		with:
-		  fetch-depth: 0  # 履歴が必要な場合のため。なくても動くが入れておくと無難
-		  persist-credentials: false
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
-	  - name: Setup Ruby
-		uses: ruby/setup-ruby@v1
-		with:
-		  ruby-version: '3.3' # 使いたいRubyバージョンに合わせて
-		  bundler-cache: true
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
 
-	  - name: Install dependencies
-		run: |
-		  bundle install
+      - name: Install dependencies
+        run: bundle install
 
-	  - name: Build Jekyll
-		run: |
-		  bundle exec jekyll build
-		env:
-		  JEKYLL_ENV: production
+      - name: Build Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
 
-	  # _site の中身を gh-pages ブランチにデプロイ
-	  - name: Deploy to gh-pages branch
-		uses: peaceiris/actions-gh-pages@v4
-		with:
-		  github_token: ${{ secrets.GITHUB_TOKEN }}
-		  publish_dir: ./_site
-		  publish_branch: gh-pages
-		  force_orphan: true
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
+          force_orphan: true
