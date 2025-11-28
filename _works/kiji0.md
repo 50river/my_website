@@ -1,7 +1,7 @@
 ---
 title: "議会DXのあり方、政務活動費の使途透明化から、プロセスの透明化へ 議会DXのあり方、政務活動費の使途透明化から、プロセスの透明化へ "
 category: 地方議会
-image: "assets/file/0.pdf"
+image: "assets/img/０.jpg"
 tags:
   - 地方議会
   - 議会DX
