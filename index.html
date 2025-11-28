@@ -272,10 +272,11 @@ layout: default
 		</div>
 	  </div>
 	  <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-		<form class="space-y-4" action="mailto:nonoichi@ikagawa.info?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B" method="POST" enctype="text/plain">
-		  <input type="text" name="name" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お名前">
-		  <input type="email" name="email" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="メールアドレス">
-		  <textarea rows="4" name="message" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お問い合わせ内容"></textarea>
+		<form class="space-y-4" action="https://formspree.io/f/meobrekw" method="POST">
+		  <input type="text" name="name" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お名前" required>
+		  <input type="email" name="_replyto" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="メールアドレス" required>
+		  <textarea rows="4" name="message" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お問い合わせ内容" required></textarea>
+		  <input type="hidden" name="_subject" value="サイトからのお問い合わせ">
 		  <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-lg shadow-lg">送信する</button>
 		</form>
 	  </div>
