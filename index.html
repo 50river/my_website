@@ -46,7 +46,7 @@ layout: default
 	<div class="hidden md:block md:w-2/5 mt-12 md:mt-0 relative flex-shrink-0">
 	  <div class="relative w-72 h-72 lg:w-80 lg:h-80 mx-auto">
 		<div class="absolute inset-0 bg-teal-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
-		<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800" class="relative w-full h-full object-cover rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 border-4 border-white">
+		<img src="{{ '/assets/img/IMG_1310.JPG' | relative_url }}" class="relative w-full h-full object-cover rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 border-4 border-white" alt="Profile image">
 	  </div>
 	</div>
   </div>
@@ -253,23 +253,29 @@ layout: default
 		  通常2営業日以内に返信いたします。
 		</p>
 		<div class="space-y-4">
-		  <a href="#" class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
-			<i data-lucide="mail" class="w-5 h-5"></i>
-			<span>hello@example.com</span>
-		  </a>
+		  <div class="flex items-start gap-3 text-slate-300">
+			<i data-lucide="map-pin" class="w-5 h-5 mt-0.5"></i>
+			<div>
+			  <div class="font-semibold">〒921-8812</div>
+			  <div class="text-sm leading-tight">石川県野々市市扇が丘3番9号</div>
+			</div>
+		  </div>
+		  <div class="flex items-center gap-3 text-slate-300">
+			<i data-lucide="phone" class="w-5 h-5"></i>
+			<span class="font-semibold tracking-wide">080-9301-7941</span>
+		  </div>
 		  <div class="flex gap-4 mt-8">
-			<a href="#" class="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
-			<a href="#" class="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-colors"><i data-lucide="github" class="w-5 h-5"></i></a>
-			<a href="#" class="p-3 bg-slate-800 rounded-full hover:bg-blue-700 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+			<a href="https://www.instagram.com/50river" class="p-3 bg-slate-800 rounded-full hover:bg-pink-600 transition-colors" aria-label="Instagram @50river"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+			<a href="https://www.facebook.com/50river" class="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition-colors" aria-label="Facebook @50river"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+			<a href="https://github.com/50river" class="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-colors" aria-label="GitHub @50river"><i data-lucide="github" class="w-5 h-5"></i></a>
 		  </div>
 		</div>
 	  </div>
 	  <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
-		<!-- フォーム実装にはFormspreeなどが便利です -->
-		<form class="space-y-4">
-		  <input type="text" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お名前">
-		  <input type="email" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="メールアドレス">
-		  <textarea rows="4" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お問い合わせ内容"></textarea>
+		<form class="space-y-4" action="mailto:nonoichi@ikagawa.info?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B" method="POST" enctype="text/plain">
+		  <input type="text" name="name" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お名前">
+		  <input type="email" name="email" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="メールアドレス">
+		  <textarea rows="4" name="message" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お問い合わせ内容"></textarea>
 		  <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-lg shadow-lg">送信する</button>
 		</form>
 	  </div>

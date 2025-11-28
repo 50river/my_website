@@ -1,6 +1,6 @@
 ---
 title: "野々市市西部中央土地区画整理組合webサイト"
-category: Business
+category: business
 image: "assets/img/seibu.jpg"
 tags:
   - webサイト
