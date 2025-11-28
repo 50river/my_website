@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAZUNOBU IKAGAWA</title>
+  <!-- Tailwind CSS (Typography含む) -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+	html { font-size: 16px; }
+	/* Custom styles if needed */
+	.fade-in { animation: fadeIn 0.5s ease-in; }
+	@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+	/* 読み物内リンクを見やすく */
+	.prose a {
+	  color: #2563eb;
+	  text-decoration: underline;
+	  text-decoration-thickness: 2px;
+	  text-underline-offset: 3px;
+	}
+	.prose a:hover {
+	  color: #1d4ed8;
+	}
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
+	<div class="container mx-auto px-6 flex justify-between items-center">
+	  <a href="/my_website/#home" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+		KAZUNOBU IKAGAWA
+	  </a>
+	  
+	  <!-- Desktop Menu -->
+	  <div class="hidden md:flex space-x-8">
+		<a href="/my_website/#home" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Top</a>
+		<a href="/my_website/#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About</a>
+		<a href="/my_website/#works" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Works</a>
+		<a href="/my_website/#services" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Services</a>
+		<a href="/my_website/#media" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Media</a>
+		<a href="/my_website/#contact" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+	  </div>
+
+	  <!-- Mobile Menu Button -->
+	  <button id="menu-btn" class="md:hidden text-slate-600">
+		<i data-lucide="menu"></i>
+	  </button>
+	</div>
+
+	<!-- Mobile Menu -->
+	<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+	  <div class="px-6 py-4 flex flex-col space-y-4">
+		<a href="/my_website/#home" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Top</a>
+		<a href="/my_website/#about" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">About</a>
+		<a href="/my_website/#works" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Works</a>
+		<a href="/my_website/#services" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Services</a>
+		<a href="/my_website/#media" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Media</a>
+		<a href="/my_website/#contact" class="mobile-link text-slate-600 font-medium py-2">Contact</a>
+	  </div>
+	</div>
+  </nav>
+
+  <!-- Main Content -->
+  <!-- Hero Section -->
+<section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
+  <div class="absolute inset-0 z-0">
+	<img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000" alt="Background" class="w-full h-full object-cover opacity-10">
+	<div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-50"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10 text-center md:text-left md:flex md:items-center md:justify-between md:gap-10 lg:gap-16">
+	<div class="md:w-3/5 max-w-3xl space-y-6">
+	  <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-slate-900">
+		課題の原因を分析し<br>解決まで伴走します
+	  </h1>
+	  <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+		  地方議会
+	  </div>
+	  <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+			Civic Tech
+		</div>
+		<div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+			Coworking
+		</div>
+		<div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4">
+			Workshop
+		</div>
+	  <p class="text-lg md:text-xl text-slate-600 font-medium">
+		テクノロジーと対話で、顧客の意思決定を強力にサポート。
+	  </p>
+	  <p class="text-slate-500 leading-relaxed max-w-2xl">
+		政務活動費管理SaaS「Semkan」を中心に、議会DXの推進を行っています。さらに、AI活用やオープンデータの普及を通じて、自治体と市民をつなぐ新しい仕組みづくりに取り組んでいます。また、ワークショップの企画運営、コワーキングスペースの運営、各種イベントを通じたコミュニティづくりやコンサルティングも行っています。
+	  </p>
+	  <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+		<a href="#works" class="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-200">
+		  実績を見る
+		</a>
+		<a href="#contact" class="px-8 py-3 bg-white text-slate-700 border border-slate-200 rounded-lg font-semibold hover:bg-slate-50 transition-colors">
+		  お問い合わせ
+		</a>
+	  </div>
+	</div>
+	
+	<!-- Profile Image Area -->
+	<div class="hidden md:block md:w-2/5 mt-12 md:mt-0 relative flex-shrink-0">
+	  <div class="relative w-72 h-72 lg:w-80 lg:h-80 mx-auto">
+		<div class="absolute inset-0 bg-teal-200 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+		<img src="/my_website/assets/img/IMG_1310.JPG" class="relative w-full h-full object-cover rounded-2xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 border-4 border-white" alt="Profile image">
+	  </div>
+	</div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+	<div class="flex flex-col md:flex-row gap-16">
+	  <div class="md:w-1/3 space-y-8">
+		<div>
+		  <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+			<span class="w-8 h-1 bg-blue-600 block"></span> About Me
+		  </h2>
+		  <p class="text-slate-600 leading-relaxed">
+			<b>五十川 員申</b><br>昭和58年12月15日生まれ<br>岐阜県揖斐郡池田町出身→石川県金沢市、野々市市の2拠点に在住。<br><br><b>流行より文化を作りながら日本を元気にする仕事をしています</b><br><br><b>流行より文化を作りながら</b><br>⇨私が関わるもの全てが、一過性のトレンドで終わるようなものではなく、継続して地域や日本に根ざせるものかを判断の基準としています。<br><br><b>日本を元気にする</b><br>⇨小さなビジネスや個々が発見した課題解決に向けての挑戦者を増やすこと!
+		  </p>
+		  <div class="mt-4">
+			<a href="/my_website/about/" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:gap-3 transition-all">
+			  詳しく見る
+			  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+			</a>
+		  </div>
+		</div>
+		<div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+		  <h3 class="font-bold text-lg mb-4 text-slate-800">Personal & Hobbies</h3>
+		  <div class="flex flex-wrap gap-2">
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-sm">
+			  #道の駅・SA・PA巡り
+			</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-sm">
+			  #ガジェット
+			</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-sm">
+			  #ゲーム
+			</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-sm">
+			  #ハック
+			</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-sm">
+			  #HIPHOP
+			</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-sm">
+			  #アート鑑賞
+			</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-sm">
+			  #読書
+			</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-sm">
+			  #写真
+			</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-sm">
+			  #古い物
+			</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-sm">
+			  #ボードゲーム
+			</span>
+			
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="md:w-2/3">
+		<h3 class="text-2xl font-bold mb-8 text-slate-800">Biography</h3>
+		<div class="space-y-8 pl-4 border-l-2 border-slate-100">
+		  
+		  <div class="relative pl-8 group">
+			<div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			<span class="text-sm font-bold text-blue-600 mb-1 block">2010.8.20</span>
+			<h4 class="text-xl font-bold text-slate-800 mb-2">cafe? IKAGAWA DO開業</h4>
+			<p class="text-slate-600">日本で3番目となるカフェスタイルのCoworkingが目的な場所を開業。</p>
+		  </div>
+		  
+		  <div class="relative pl-8 group">
+			<div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			<span class="text-sm font-bold text-blue-600 mb-1 block">2012</span>
+			<h4 class="text-xl font-bold text-slate-800 mb-2">シビックテック活動を開始</h4>
+			<p class="text-slate-600">Code for Kanazawa創設理事（2014年2月一般社団法人化）として、シビックテック活動やオープンデータの普及、サービス開発を行う。</p>
+		  </div>
+		  
+		  <div class="relative pl-8 group">
+			<div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			<span class="text-sm font-bold text-blue-600 mb-1 block">2014.4</span>
+			<h4 class="text-xl font-bold text-slate-800 mb-2">起業家育成等非常勤で教鞭に立つ</h4>
+			<p class="text-slate-600">金沢大学大学院（イノベーション方法論）や、専門学校 金沢文化服装学院（ファッションビジネス科2019年3月まで）で教鞭をとる。</p>
+		  </div>
+		  
+		  <div class="relative pl-8 group">
+			<div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			<span class="text-sm font-bold text-blue-600 mb-1 block">2015.4</span>
+			<h4 class="text-xl font-bold text-slate-800 mb-2">野々市市議会議員当選（2019年1月県議立候補の為辞職）</h4>
+			<p class="text-slate-600">取り組んできたシビックテックの活動や、行政のデジタル化、事業承継や地域の課題を肌で感じ、選挙に挑戦。</p>
+		  </div>
+		  
+		  <div class="relative pl-8 group">
+			<div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			<span class="text-sm font-bold text-blue-600 mb-1 block">2020</span>
+			<h4 class="text-xl font-bold text-slate-800 mb-2">セムカン開発開始</h4>
+			<p class="text-slate-600">石川県金沢市にある株式会社エイブルコンピュータと共に、議員時代に感じた課題や地方議会のあるべき姿を形にするべくサービス開発を開始。</p>
+		  </div>
+		  
+		  <div class="relative pl-8 group">
+			<div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			<span class="text-sm font-bold text-blue-600 mb-1 block">2020.2</span>
+			<h4 class="text-xl font-bold text-slate-800 mb-2">クオリティソフト株式会社 研究員</h4>
+			<p class="text-slate-600">和歌山県白浜町にあるクオリティソフト株式会社にて地域課題解決のイベントや社内でのUI/UXチーム立ち上げの為参画。</p>
+		  </div>
+		  
+		  <div class="relative pl-8 group">
+			<div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			<span class="text-sm font-bold text-blue-600 mb-1 block">2021.9</span>
+			<h4 class="text-xl font-bold text-slate-800 mb-2">国立研究開発法人 情報通信研究機構 招聘専門員</h4>
+			<p class="text-slate-600">NICTにてイノベーションコーディネータとして研究成果の社会実装へのアドバイスや、北陸拠点のイベントサポートを行う。</p>
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+<!-- Works Section -->
+<section id="works" class="py-20 bg-slate-50">
+  <div class="container mx-auto px-6">
+	<div class="text-center mb-12">
+	  <h2 class="text-3xl font-bold mb-4">Selected Works</h2>
+	  <p class="text-slate-500">これまでの取り組みとプロジェクト</p>
+	</div>
+
+	<!-- Filter Buttons -->
+	<div class="flex justify-center gap-4 mb-12 flex-wrap" id="work-filters">
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-slate-800 text-white shadow-lg" data-filter="all">All</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="business">Business</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="community">Community</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="dev">Personal Dev</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="地方議会">地方議会</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="Civic Tech">Civic Tech</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="Coworking">Coworking</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="Workshop">Workshop</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="その他">その他</button>
+	</div>
+
+	<!-- Works Grid -->
+	
+	
+	
+	
+	
+
+	
+
+	
+	  
+		
+		
+	  
+		
+		
+	  
+		
+		
+	  
+		
+		
+	  
+		
+		
+		  
+	
+
+	<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+	  
+	  
+	  
+	  <div class="work-item group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-category="business">
+		<a href="/my_website/works/semkan/" class="block h-full">
+		  <div class="relative h-48 overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+			<img src="/my_website/assets/img/semkan.jpg" alt="Semkan（セムカン）" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		  </div>
+		  <div class="p-6">
+			<div class="flex justify-between items-start mb-2">
+			  <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">business</span>
+			  <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-500"></i>
+			</div>
+			<h3 class="text-xl font-bold text-slate-800 mb-2">Semkan（セムカン）</h3>
+			<p class="text-slate-600 text-sm mb-4 line-clamp-3">セムカンは、煩雑な地方議会の政務活動費事務作業から情報公開までをかんたん化するためのクラウド型の議会DXプラットフォームです。領収書の読み取りから支出登録、事…</p>
+			<div class="flex flex-wrap gap-2 mt-auto">
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">地方議会</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">エイブルコンピュータ</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">議会DX</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">SaaS</span>
+			  
+			</div>
+		  </div>
+		</a>
+	  </div>
+	  
+	  
+	  
+	  <div class="work-item group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-category="地方議会">
+		<a href="/my_website/works/kiji0/" class="block h-full">
+		  <div class="relative h-48 overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+			<img src="/my_website/assets/img/%EF%BC%90.jpg" alt="議会DXのあり方、政務活動費の使途透明化から、プロセスの透明化へ 議会DXのあり方、政務活動費の使途透明化から、プロセスの透明化へ " class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		  </div>
+		  <div class="p-6">
+			<div class="flex justify-between items-start mb-2">
+			  <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">地方議会</span>
+			  <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-500"></i>
+			</div>
+			<h3 class="text-xl font-bold text-slate-800 mb-2">議会DXのあり方、政務活動費の使途透明化から、プロセスの透明化へ 議会DXのあり方、政務活動費の使途透明化から、プロセスの透明化へ </h3>
+			<p class="text-slate-600 text-sm mb-4 line-clamp-3">議員のためのウェブマガジン議員NAVIの政策の核心をつかむ明日の論点というコーナーで2024年6月10日に掲載された記事です。
+</p>
+			<div class="flex flex-wrap gap-2 mt-auto">
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">地方議会</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">議会DX</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">執筆記事</span>
+			  
+			</div>
+		  </div>
+		</a>
+	  </div>
+	  
+	  
+	  
+	  <div class="work-item group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-category="Civic Tech">
+		<a href="/my_website/works/holiday/" class="block h-full">
+		  <div class="relative h-48 overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+			<img src="/my_website/assets/img/touban.jpg" alt="休日当番医（金沢市）" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		  </div>
+		  <div class="p-6">
+			<div class="flex justify-between items-start mb-2">
+			  <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">Civic Tech</span>
+			  <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-500"></i>
+			</div>
+			<h3 class="text-xl font-bold text-slate-800 mb-2">休日当番医（金沢市）</h3>
+			<p class="text-slate-600 text-sm mb-4 line-clamp-3">金沢市の公開しているオープンデータを利用して休日当番医がわかるwebアプリを作成しました。休日当番医（金沢市）アプリ
+</p>
+			<div class="flex flex-wrap gap-2 mt-auto">
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">JS</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">Open Data</span>
+			  
+			</div>
+		  </div>
+		</a>
+	  </div>
+	  
+	  
+	  
+	  <div class="work-item group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-category="Coworking">
+		<a href="/my_website/works/ikagawado/" class="block h-full">
+		  <div class="relative h-48 overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+			<img src="/my_website/assets/img/ikagawado.jpg" alt="cafe? IKAGAWA DO" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		  </div>
+		  <div class="p-6">
+			<div class="flex justify-between items-start mb-2">
+			  <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">Coworking</span>
+			  <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-500"></i>
+			</div>
+			<h3 class="text-xl font-bold text-slate-800 mb-2">cafe? IKAGAWA DO</h3>
+			<p class="text-slate-600 text-sm mb-4 line-clamp-3">cafe? IKAGAWA DO は、日本で3番目となるコワーキングが主目的なスペースです。
+飲食店でありながら、地域の人が自然に集まり、情報とアイデアが行き…</p>
+			<div class="flex flex-wrap gap-2 mt-auto">
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">Coworking</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">拠点</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">カフェ</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">新規ビジネス</span>
+			  
+			</div>
+		  </div>
+		</a>
+	  </div>
+	  
+	  
+	  
+	  <div class="work-item group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-category="Civic Tech">
+		<a href="/my_website/works/gomi/" class="block h-full">
+		  <div class="relative h-48 overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+			<img src="/my_website/assets/img/gomi.jpg" alt="金沢市ごみ分別チャレンジ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		  </div>
+		  <div class="p-6">
+			<div class="flex justify-between items-start mb-2">
+			  <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">Civic Tech</span>
+			  <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-500"></i>
+			</div>
+			<h3 class="text-xl font-bold text-slate-800 mb-2">金沢市ごみ分別チャレンジ</h3>
+			<p class="text-slate-600 text-sm mb-4 line-clamp-3">金沢市の公開しているオープンデータを利用してゴミの分別を学ぶアプリを作成しました。金沢市ごみ分別チャレンジ
+</p>
+			<div class="flex flex-wrap gap-2 mt-auto">
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">JS</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">Open Data</span>
+			  
+			</div>
+		  </div>
+		</a>
+	  </div>
+	  
+	  
+	  
+	  <div class="work-item group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-category="business">
+		<a href="/my_website/works/seibu/" class="block h-full">
+		  <div class="relative h-48 overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+			<img src="/my_website/assets/img/seibu.jpg" alt="野々市市西部中央土地区画整理組合webサイト" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		  </div>
+		  <div class="p-6">
+			<div class="flex justify-between items-start mb-2">
+			  <span class="text-xs font-bold text-blue-600 uppercase tracking-wide">business</span>
+			  <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-blue-500"></i>
+			</div>
+			<h3 class="text-xl font-bold text-slate-800 mb-2">野々市市西部中央土地区画整理組合webサイト</h3>
+			<p class="text-slate-600 text-sm mb-4 line-clamp-3">野々市市西部中央土地区画整理組合の公式Webサイトを構築しました。企画、情報設計、写真撮影、デザイン、実装、公開後の保守までを一貫して担当し、土地区画整理事業…</p>
+			<div class="flex flex-wrap gap-2 mt-auto">
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">webサイト</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">撮影</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">ディレクション</span>
+			  
+			  <span class="text-xs px-2 py-1 bg-slate-100 text-slate-600 rounded">保守・管理</span>
+			  
+			</div>
+		  </div>
+		</a>
+	  </div>
+	  
+	</div>
+	<div class="mt-8 text-right">
+	  <a href="/my_website/works/" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:gap-3 transition-all">
+		過去の実績をすべて見る
+		<i data-lucide="arrow-right" class="w-4 h-4"></i>
+	  </a>
+	</div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+	<div class="text-center mb-16">
+	  <h2 class="text-3xl font-bold mb-4">Services</h2>
+	  <p class="text-slate-500">技術と知識を活用し、以下の領域でお手伝いできます。</p>
+	</div>
+
+	
+	<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+	  
+	  <a href="/my_website/services/dx-saas/" class="block p-6 rounded-xl border border-slate-100 hover:border-blue-100 hover:bg-blue-50/30 transition-colors h-full">
+		<div class="mb-4 p-3 bg-slate-50 rounded-lg inline-block text-blue-600">
+		  <i data-lucide="building-2" class="w-8 h-8"></i>
+		</div>
+		<h3 class="text-lg font-bold text-slate-800 mb-2">DX・SaaS導入支援</h3>
+		<p class="text-slate-600 text-sm leading-relaxed line-clamp-3">
+		  自治体や中小企業向けに、業務課題の整理からSaaS選定、導入・定着まで伴走します。要件の言語化、運用フロー設計、トレーニング、KPI設計までワンストップで支援します。
+
+		</p>
+	  </a>
+	  
+	  <a href="/my_website/services/prototype-dev/" class="block p-6 rounded-xl border border-slate-100 hover:border-blue-100 hover:bg-blue-50/30 transition-colors h-full">
+		<div class="mb-4 p-3 bg-slate-50 rounded-lg inline-block text-blue-600">
+		  <i data-lucide="code" class="w-8 h-8"></i>
+		</div>
+		<h3 class="text-lg font-bold text-slate-800 mb-2">プロトタイプ開発</h3>
+		<p class="text-slate-600 text-sm leading-relaxed line-clamp-3">
+		  新規事業のPoCや社内向けMVPを短期間で立ち上げます。Webアプリ、バックエンドAPI、生成AIの統合など、仮説検証に必要なスコープを絞って実装します。
+
+		</p>
+	  </a>
+	  
+	  <a href="/my_website/services/open-data/" class="block p-6 rounded-xl border border-slate-100 hover:border-blue-100 hover:bg-blue-50/30 transition-colors h-full">
+		<div class="mb-4 p-3 bg-slate-50 rounded-lg inline-block text-blue-600">
+		  <i data-lucide="database" class="w-8 h-8"></i>
+		</div>
+		<h3 class="text-lg font-bold text-slate-800 mb-2">情報公開・データ整備</h3>
+		<p class="text-slate-600 text-sm leading-relaxed line-clamp-3">
+		  オープンデータの整備や可視化ダッシュボード構築を支援します。データカタログ設計、CSV/JSONの整形、ダッシュボードの要件定義、公開ワークフロー設計などをサポートします。
+
+		</p>
+	  </a>
+	  
+	  <a href="/my_website/services/lecture-workshop/" class="block p-6 rounded-xl border border-slate-100 hover:border-blue-100 hover:bg-blue-50/30 transition-colors h-full">
+		<div class="mb-4 p-3 bg-slate-50 rounded-lg inline-block text-blue-600">
+		  <i data-lucide="mic" class="w-8 h-8"></i>
+		</div>
+		<h3 class="text-lg font-bold text-slate-800 mb-2">講演・ワークショップ</h3>
+		<p class="text-slate-600 text-sm leading-relaxed line-clamp-3">
+		  シビックテック、生成AI活用、地方創生をテーマに講演やハンズオンを実施します。自治体職員・事業者向けの実践的な内容で、導入手順や事例を交えて解説します。
+
+		</p>
+	  </a>
+	  
+	</div>
+	<div class="mt-8 text-right">
+	  <a href="/my_website/services/" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:gap-3 transition-all">
+		サービスをすべて見る
+		<i data-lucide="arrow-right" class="w-4 h-4"></i>
+	  </a>
+	</div>
+  </div>
+</section>
+
+<!-- Media Section -->
+<section id="media" class="py-20 bg-slate-50">
+  <div class="container mx-auto px-6 max-w-4xl">
+	<h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
+	  <i data-lucide="newspaper"></i> Media Coverage
+	</h2>
+	
+	<div class="bg-white rounded-xl shadow-sm border border-slate-100 divide-y divide-slate-100">
+	  
+	  <a href="/my_website/media/jichinippo1124/" class="block p-6 flex flex-col md:flex-row md:items-center gap-2 md:gap-6 hover:bg-slate-50 transition-colors">
+		<span class="text-slate-400 font-mono text-sm">2025.11.24</span>
+		<span class="inline-block px-2 py-1 bg-slate-100 text-xs font-semibold text-slate-600 rounded">自治日報</span>
+		<h4 class="flex-1 font-medium text-slate-800">「議会発の透明化で勝ち得る、市民からの信頼〜政務活動費から議員の専門性発信へ〜」と題した記事を寄稿させていただきました。</h4>
+		<i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+	  </a>
+	  
+	  <a href="/my_website/media/seminar/" class="block p-6 flex flex-col md:flex-row md:items-center gap-2 md:gap-6 hover:bg-slate-50 transition-colors">
+		<span class="text-slate-400 font-mono text-sm">2025.10.31</span>
+		<span class="inline-block px-2 py-1 bg-slate-100 text-xs font-semibold text-slate-600 rounded">地方議員セミナー</span>
+		<h4 class="flex-1 font-medium text-slate-800">開かれた議会へ〜住民とつながる議会DXと質問</h4>
+		<i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+	  </a>
+	  
+	  <a href="/my_website/media/giinnavi90/" class="block p-6 flex flex-col md:flex-row md:items-center gap-2 md:gap-6 hover:bg-slate-50 transition-colors">
+		<span class="text-slate-400 font-mono text-sm">2025.08.20</span>
+		<span class="inline-block px-2 py-1 bg-slate-100 text-xs font-semibold text-slate-600 rounded">議員NAVI　Plus</span>
+		<h4 class="flex-1 font-medium text-slate-800">議会DX「有権者の投票行動と議員の専門性」と題してwebマガジンに寄稿した記事が議員向けニュースレターに再掲されました。</h4>
+		<i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+	  </a>
+	  
+	  <a href="/my_website/media/giinnavi89/" class="block p-6 flex flex-col md:flex-row md:items-center gap-2 md:gap-6 hover:bg-slate-50 transition-colors">
+		<span class="text-slate-400 font-mono text-sm">2025.05.20</span>
+		<span class="inline-block px-2 py-1 bg-slate-100 text-xs font-semibold text-slate-600 rounded">議員NAVI　Plus</span>
+		<h4 class="flex-1 font-medium text-slate-800">議会DX「コストの見積もり」と題してwebマガジンに寄稿した記事が議員向けニュースレターに再掲されました。</h4>
+		<i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+	  </a>
+	  
+	</div>
+	<div class="mt-6 text-right">
+	  <a href="/my_website/media/" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:gap-3 transition-all">
+		過去の掲載をすべて見る
+		<i data-lucide="arrow-right" class="w-4 h-4"></i>
+	  </a>
+	</div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-slate-900 text-white">
+  <div class="container mx-auto px-6">
+	<div class="grid md:grid-cols-2 gap-12 items-center">
+	  <div>
+		<h2 class="text-3xl font-bold mb-6">Contact</h2>
+		<p class="text-slate-400 mb-8 leading-relaxed">
+		  お仕事のご依頼、講演の相談などお気軽にご連絡ください。<br>
+		  通常2営業日以内に返信いたします。
+		</p>
+		<div class="space-y-4">
+		  <div class="flex items-start gap-3 text-slate-300">
+			<i data-lucide="map-pin" class="w-5 h-5 mt-0.5"></i>
+			<div>
+			  <div class="font-semibold">〒921-8812</div>
+			  <div class="text-sm leading-tight">石川県野々市市扇が丘3番9号</div>
+			</div>
+		  </div>
+		  <div class="flex items-center gap-3 text-slate-300">
+			<i data-lucide="phone" class="w-5 h-5"></i>
+			<span class="font-semibold tracking-wide">080-9301-7941</span>
+		  </div>
+		  <div class="flex gap-4 mt-8">
+			<a href="https://www.instagram.com/50river" class="p-3 bg-slate-800 rounded-full hover:bg-pink-600 transition-colors" aria-label="Instagram @50river"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+			<a href="https://www.facebook.com/50river" class="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition-colors" aria-label="Facebook @50river"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+			<a href="https://github.com/50river" class="p-3 bg-slate-800 rounded-full hover:bg-slate-700 transition-colors" aria-label="GitHub @50river"><i data-lucide="github" class="w-5 h-5"></i></a>
+		  </div>
+		</div>
+	  </div>
+	  <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
+		<form class="space-y-4" action="https://formspree.io/f/meobrekw" method="POST">
+		  <input type="text" name="name" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お名前" required>
+		  <input type="email" name="_replyto" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="メールアドレス" required>
+		  <textarea rows="4" name="message" class="w-full bg-slate-800 border-slate-700 rounded-lg px-4 py-2 text-white" placeholder="お問い合わせ内容" required></textarea>
+		  <input type="hidden" name="_subject" value="サイトからのお問い合わせ">
+		  <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-lg shadow-lg">送信する</button>
+		</form>
+	  </div>
+	</div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-500 py-8 border-t border-slate-800">
+	<div class="container mx-auto px-6 text-center text-sm">
+	  <p>&copy; 2025 KAZUNOBU IKAGAWA All Rights Reserved.</p>
+	</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/my_website/assets/js/main.js"></script>
+  <script>
+	// Initialize Icons
+	lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAZUNOBU IKAGAWA</title>
+  <!-- Tailwind CSS (Typography含む) -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+	html { font-size: 16px; }
+	/* Custom styles if needed */
+	.fade-in { animation: fadeIn 0.5s ease-in; }
+	@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+	/* 読み物内リンクを見やすく */
+	.prose a {
+	  color: #2563eb;
+	  text-decoration: underline;
+	  text-decoration-thickness: 2px;
+	  text-underline-offset: 3px;
+	}
+	.prose a:hover {
+	  color: #1d4ed8;
+	}
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
+	<div class="container mx-auto px-6 flex justify-between items-center">
+	  <a href="/my_website/#home" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+		KAZUNOBU IKAGAWA
+	  </a>
+	  
+	  <!-- Desktop Menu -->
+	  <div class="hidden md:flex space-x-8">
+		<a href="/my_website/#home" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Top</a>
+		<a href="/my_website/#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About</a>
+		<a href="/my_website/#works" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Works</a>
+		<a href="/my_website/#services" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Services</a>
+		<a href="/my_website/#media" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Media</a>
+		<a href="/my_website/#contact" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+	  </div>
+
+	  <!-- Mobile Menu Button -->
+	  <button id="menu-btn" class="md:hidden text-slate-600">
+		<i data-lucide="menu"></i>
+	  </button>
+	</div>
+
+	<!-- Mobile Menu -->
+	<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+	  <div class="px-6 py-4 flex flex-col space-y-4">
+		<a href="/my_website/#home" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Top</a>
+		<a href="/my_website/#about" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">About</a>
+		<a href="/my_website/#works" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Works</a>
+		<a href="/my_website/#services" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Services</a>
+		<a href="/my_website/#media" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Media</a>
+		<a href="/my_website/#contact" class="mobile-link text-slate-600 font-medium py-2">Contact</a>
+	  </div>
+	</div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="pt-28 pb-16 bg-white">
+  <div class="container mx-auto px-6 max-w-5xl">
+	<div class="grid md:grid-cols-3 gap-10 items-start">
+	  <div class="md:col-span-1 space-y-6">
+		<p class="text-sm uppercase tracking-[0.25em] text-blue-600 font-semibold">About Me</p>
+		<h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">地方議会DXを推進するシビックテック起業家</h1>
+		<p class="text-slate-600 leading-relaxed"><b>五十川 員申</b><br>昭和58年12月15日生まれ<br>岐阜県揖斐郡池田町出身→石川県金沢市、野々市市の2拠点に在住。<br><br><b>流行より文化を作りながら日本を元気にする仕事をしています</b><br><br><b>流行より文化を作りながら</b><br>⇨私が関わるもの全てが、一過性のトレンドで終わるようなものではなく、継続して地域や日本に根ざせるものかを判断の基準としています。<br><br><b>日本を元気にする</b><br>⇨小さなビジネスや個々が発見した課題解決に向けての挑戦者を増やすこと!</p>
+
+		<div class="bg-slate-50 border border-slate-100 rounded-xl p-5">
+		  <h3 class="text-sm font-bold text-slate-800 mb-3">Hobbies</h3>
+		  <div class="flex flex-wrap gap-2">
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-xs">道の駅・SA・PA巡り</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-xs">ガジェット</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-xs">ゲーム</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-xs">ハック</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-xs">HIPHOP</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-xs">アート鑑賞</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-xs">読書</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-xs">写真</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-xs">古い物</span>
+			
+			<span class="px-3 py-1 bg-white border border-slate-200 text-slate-600 rounded-full text-xs">ボードゲーム</span>
+			
+		  </div>
+		</div>
+
+		<a href="/my_website/#contact" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:gap-3 transition-all">
+		  お問い合わせへ
+		  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+		</a>
+	  </div>
+
+	  <div class="md:col-span-2 space-y-10">
+		<div>
+		  <h2 class="text-xl font-bold text-slate-900 mb-4">Biography</h2>
+		  <div class="space-y-8 pl-4 border-l-2 border-slate-100">
+			
+			<div class="relative pl-8 group">
+			  <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			  <span class="text-sm font-bold text-blue-600 mb-1 block">2010.8.20</span>
+			  <h3 class="text-lg font-bold text-slate-800 mb-1">cafe? IKAGAWA DO開業</h3>
+			  <p class="text-slate-600">日本で3番目となるカフェスタイルのCoworkingが目的な場所を開業。</p>
+			</div>
+			
+			<div class="relative pl-8 group">
+			  <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			  <span class="text-sm font-bold text-blue-600 mb-1 block">2012</span>
+			  <h3 class="text-lg font-bold text-slate-800 mb-1">シビックテック活動を開始</h3>
+			  <p class="text-slate-600">Code for Kanazawa創設理事（2014年2月一般社団法人化）として、シビックテック活動やオープンデータの普及、サービス開発を行う。</p>
+			</div>
+			
+			<div class="relative pl-8 group">
+			  <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			  <span class="text-sm font-bold text-blue-600 mb-1 block">2014.4</span>
+			  <h3 class="text-lg font-bold text-slate-800 mb-1">起業家育成等非常勤で教鞭に立つ</h3>
+			  <p class="text-slate-600">金沢大学大学院（イノベーション方法論）や、専門学校 金沢文化服装学院（ファッションビジネス科2019年3月まで）で教鞭をとる。</p>
+			</div>
+			
+			<div class="relative pl-8 group">
+			  <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			  <span class="text-sm font-bold text-blue-600 mb-1 block">2015.4</span>
+			  <h3 class="text-lg font-bold text-slate-800 mb-1">野々市市議会議員当選（2019年1月県議立候補の為辞職）</h3>
+			  <p class="text-slate-600">取り組んできたシビックテックの活動や、行政のデジタル化、事業承継や地域の課題を肌で感じ、選挙に挑戦。</p>
+			</div>
+			
+			<div class="relative pl-8 group">
+			  <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			  <span class="text-sm font-bold text-blue-600 mb-1 block">2020</span>
+			  <h3 class="text-lg font-bold text-slate-800 mb-1">セムカン開発開始</h3>
+			  <p class="text-slate-600">石川県金沢市にある株式会社エイブルコンピュータと共に、議員時代に感じた課題や地方議会のあるべき姿を形にするべくサービス開発を開始。</p>
+			</div>
+			
+			<div class="relative pl-8 group">
+			  <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			  <span class="text-sm font-bold text-blue-600 mb-1 block">2020.2</span>
+			  <h3 class="text-lg font-bold text-slate-800 mb-1">クオリティソフト株式会社 研究員</h3>
+			  <p class="text-slate-600">和歌山県白浜町にあるクオリティソフト株式会社にて地域課題解決のイベントや社内でのUI/UXチーム立ち上げの為参画。</p>
+			</div>
+			
+			<div class="relative pl-8 group">
+			  <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-500 group-hover:scale-125 transition-transform"></div>
+			  <span class="text-sm font-bold text-blue-600 mb-1 block">2021.9</span>
+			  <h3 class="text-lg font-bold text-slate-800 mb-1">国立研究開発法人 情報通信研究機構 招聘専門員</h3>
+			  <p class="text-slate-600">NICTにてイノベーションコーディネータとして研究成果の社会実装へのアドバイスや、北陸拠点のイベントサポートを行う。</p>
+			</div>
+			
+		  </div>
+		</div>
+
+		<div class="grid md:grid-cols-2 gap-6">
+		  <div class="bg-slate-50 border border-slate-100 rounded-xl p-6">
+			<h3 class="text-lg font-bold text-slate-900 mb-3">ミッション</h3>
+			<p class="text-slate-600 text-sm leading-relaxed">
+			  テクノロジーと対話で行政の透明性を高め、地域の意思決定をアップデートすること。
+			</p>
+		  </div>
+		  <div class="bg-slate-50 border border-slate-100 rounded-xl p-6">
+			<h3 class="text-lg font-bold text-slate-900 mb-3">現在の取り組み</h3>
+			<p class="text-slate-600 text-sm leading-relaxed">
+			  議会録検索SaaS「Semukan」の開発運営を軸に、自治体向け生成AI活用やオープンデータ推進を伴走支援しています。
+			</p>
+		  </div>
+		</div>
+
+		<div class="bg-blue-50 border border-blue-100 rounded-2xl p-6">
+		  <h3 class="text-lg font-bold text-slate-900 mb-2">最近のメディア掲載・登壇</h3>
+		  
+		  <div class="divide-y divide-blue-100">
+			
+			<a href="/my_website/media/jichinippo1124/" class="flex items-center gap-3 py-3 hover:text-blue-700 transition-colors">
+			  <span class="text-xs font-mono text-slate-500">2025.11.24</span>
+			  <span class="text-xs px-2 py-1 bg-white text-slate-600 rounded border border-blue-100">自治日報</span>
+			  <span class="text-sm font-semibold text-slate-800">「議会発の透明化で勝ち得る、市民からの信頼〜政務活動費から議員の専門性発信へ〜」と題した記事を寄稿させていただきました。</span>
+			  <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+			</a>
+			
+			<a href="/my_website/media/seminar/" class="flex items-center gap-3 py-3 hover:text-blue-700 transition-colors">
+			  <span class="text-xs font-mono text-slate-500">2025.10.31</span>
+			  <span class="text-xs px-2 py-1 bg-white text-slate-600 rounded border border-blue-100">地方議員セミナー</span>
+			  <span class="text-sm font-semibold text-slate-800">開かれた議会へ〜住民とつながる議会DXと質問</span>
+			  <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+			</a>
+			
+			<a href="/my_website/media/giinnavi90/" class="flex items-center gap-3 py-3 hover:text-blue-700 transition-colors">
+			  <span class="text-xs font-mono text-slate-500">2025.08.20</span>
+			  <span class="text-xs px-2 py-1 bg-white text-slate-600 rounded border border-blue-100">議員NAVI　Plus</span>
+			  <span class="text-sm font-semibold text-slate-800">議会DX「有権者の投票行動と議員の専門性」と題してwebマガジンに寄稿した記事が議員向けニュースレターに再掲されました。</span>
+			  <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-400"></i>
+			</a>
+			
+		  </div>
+		  <div class="mt-4">
+			<a href="/my_website/media/" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:gap-3 transition-all">
+			  もっと見る
+			  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+			</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-500 py-8 border-t border-slate-800">
+	<div class="container mx-auto px-6 text-center text-sm">
+	  <p>&copy; 2025 KAZUNOBU IKAGAWA All Rights Reserved.</p>
+	</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/my_website/assets/js/main.js"></script>
+  <script>
+	// Initialize Icons
+	lucide.createIcons();
+  </script>
+</body>
+</html>

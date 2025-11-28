@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAZUNOBU IKAGAWA</title>
+  <!-- Tailwind CSS (Typography含む) -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+	html { font-size: 16px; }
+	/* Custom styles if needed */
+	.fade-in { animation: fadeIn 0.5s ease-in; }
+	@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+	/* 読み物内リンクを見やすく */
+	.prose a {
+	  color: #2563eb;
+	  text-decoration: underline;
+	  text-decoration-thickness: 2px;
+	  text-underline-offset: 3px;
+	}
+	.prose a:hover {
+	  color: #1d4ed8;
+	}
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
+	<div class="container mx-auto px-6 flex justify-between items-center">
+	  <a href="/my_website/#home" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+		KAZUNOBU IKAGAWA
+	  </a>
+	  
+	  <!-- Desktop Menu -->
+	  <div class="hidden md:flex space-x-8">
+		<a href="/my_website/#home" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Top</a>
+		<a href="/my_website/#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About</a>
+		<a href="/my_website/#works" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Works</a>
+		<a href="/my_website/#services" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Services</a>
+		<a href="/my_website/#media" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Media</a>
+		<a href="/my_website/#contact" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+	  </div>
+
+	  <!-- Mobile Menu Button -->
+	  <button id="menu-btn" class="md:hidden text-slate-600">
+		<i data-lucide="menu"></i>
+	  </button>
+	</div>
+
+	<!-- Mobile Menu -->
+	<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+	  <div class="px-6 py-4 flex flex-col space-y-4">
+		<a href="/my_website/#home" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Top</a>
+		<a href="/my_website/#about" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">About</a>
+		<a href="/my_website/#works" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Works</a>
+		<a href="/my_website/#services" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Services</a>
+		<a href="/my_website/#media" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Media</a>
+		<a href="/my_website/#contact" class="mobile-link text-slate-600 font-medium py-2">Contact</a>
+	  </div>
+	</div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="pt-28 pb-16 bg-slate-50">
+  <div class="container mx-auto px-6">
+	<div class="flex items-start justify-between gap-4 mb-8">
+	  <div>
+		<p class="text-sm uppercase tracking-[0.25em] text-blue-600 font-semibold mb-2">Services</p>
+		<h1 class="text-3xl md:text-4xl font-extrabold text-slate-900">提供サービス一覧</h1>
+		<p class="text-slate-500 mt-2">伴走支援からプロトタイプ開発、講演まで幅広く対応します。</p>
+	  </div>
+	  <a href="/my_website/#services" class="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors">
+		<i data-lucide="arrow-left" class="w-4 h-4"></i> トップへ戻る
+	  </a>
+	</div>
+
+	
+	<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+	  
+	  
+	  <div class="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+		<a href="/my_website/services/dx-saas/" class="block h-full">
+		  
+		  <div class="relative h-40 overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+			<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&q=80&w=1200" alt="DX・SaaS導入支援" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		  </div>
+		  
+		  <div class="p-6 space-y-3">
+			<div class="flex items-center gap-2 text-blue-600">
+			  <i data-lucide="building-2" class="w-5 h-5"></i>
+			  <span class="text-xs font-bold uppercase tracking-wide">Service</span>
+			</div>
+			<h3 class="text-xl font-bold text-slate-900">DX・SaaS導入支援</h3>
+			<p class="text-sm text-slate-600 line-clamp-3">自治体や中小企業向けに、業務課題の整理からSaaS選定、導入・定着まで伴走します。要件の言語化、運用フロー設計、トレーニング、KPI設計までワンストップで支援します。
+</p>
+		  </div>
+		</a>
+	  </div>
+	  
+	  
+	  <div class="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+		<a href="/my_website/services/prototype-dev/" class="block h-full">
+		  
+		  <div class="relative h-40 overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+			<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200" alt="プロトタイプ開発" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		  </div>
+		  
+		  <div class="p-6 space-y-3">
+			<div class="flex items-center gap-2 text-blue-600">
+			  <i data-lucide="code" class="w-5 h-5"></i>
+			  <span class="text-xs font-bold uppercase tracking-wide">Service</span>
+			</div>
+			<h3 class="text-xl font-bold text-slate-900">プロトタイプ開発</h3>
+			<p class="text-sm text-slate-600 line-clamp-3">新規事業のPoCや社内向けMVPを短期間で立ち上げます。Webアプリ、バックエンドAPI、生成AIの統合など、仮説検証に必要なスコープを絞って実装します。
+</p>
+		  </div>
+		</a>
+	  </div>
+	  
+	  
+	  <div class="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+		<a href="/my_website/services/open-data/" class="block h-full">
+		  
+		  <div class="relative h-40 overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+			<img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200" alt="情報公開・データ整備" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		  </div>
+		  
+		  <div class="p-6 space-y-3">
+			<div class="flex items-center gap-2 text-blue-600">
+			  <i data-lucide="database" class="w-5 h-5"></i>
+			  <span class="text-xs font-bold uppercase tracking-wide">Service</span>
+			</div>
+			<h3 class="text-xl font-bold text-slate-900">情報公開・データ整備</h3>
+			<p class="text-sm text-slate-600 line-clamp-3">オープンデータの整備や可視化ダッシュボード構築を支援します。データカタログ設計、CSV/JSONの整形、ダッシュボードの要件定義、公開ワークフロー設計などをサポートします。
+</p>
+		  </div>
+		</a>
+	  </div>
+	  
+	  
+	  <div class="group bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+		<a href="/my_website/services/lecture-workshop/" class="block h-full">
+		  
+		  <div class="relative h-40 overflow-hidden">
+			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
+			<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1200" alt="講演・ワークショップ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+		  </div>
+		  
+		  <div class="p-6 space-y-3">
+			<div class="flex items-center gap-2 text-blue-600">
+			  <i data-lucide="mic" class="w-5 h-5"></i>
+			  <span class="text-xs font-bold uppercase tracking-wide">Service</span>
+			</div>
+			<h3 class="text-xl font-bold text-slate-900">講演・ワークショップ</h3>
+			<p class="text-sm text-slate-600 line-clamp-3">シビックテック、生成AI活用、地方創生をテーマに講演やハンズオンを実施します。自治体職員・事業者向けの実践的な内容で、導入手順や事例を交えて解説します。
+</p>
+		  </div>
+		</a>
+	  </div>
+	  
+	</div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-500 py-8 border-t border-slate-800">
+	<div class="container mx-auto px-6 text-center text-sm">
+	  <p>&copy; 2025 KAZUNOBU IKAGAWA All Rights Reserved.</p>
+	</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/my_website/assets/js/main.js"></script>
+  <script>
+	// Initialize Icons
+	lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAZUNOBU IKAGAWA</title>
+  <!-- Tailwind CSS (Typography含む) -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+	html { font-size: 16px; }
+	/* Custom styles if needed */
+	.fade-in { animation: fadeIn 0.5s ease-in; }
+	@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+	/* 読み物内リンクを見やすく */
+	.prose a {
+	  color: #2563eb;
+	  text-decoration: underline;
+	  text-decoration-thickness: 2px;
+	  text-underline-offset: 3px;
+	}
+	.prose a:hover {
+	  color: #1d4ed8;
+	}
+  </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-transparent">
+	<div class="container mx-auto px-6 flex justify-between items-center">
+	  <a href="/my_website/#home" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+		KAZUNOBU IKAGAWA
+	  </a>
+	  
+	  <!-- Desktop Menu -->
+	  <div class="hidden md:flex space-x-8">
+		<a href="/my_website/#home" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Top</a>
+		<a href="/my_website/#about" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About</a>
+		<a href="/my_website/#works" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Works</a>
+		<a href="/my_website/#services" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Services</a>
+		<a href="/my_website/#media" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Media</a>
+		<a href="/my_website/#contact" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+	  </div>
+
+	  <!-- Mobile Menu Button -->
+	  <button id="menu-btn" class="md:hidden text-slate-600">
+		<i data-lucide="menu"></i>
+	  </button>
+	</div>
+
+	<!-- Mobile Menu -->
+	<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+	  <div class="px-6 py-4 flex flex-col space-y-4">
+		<a href="/my_website/#home" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Top</a>
+		<a href="/my_website/#about" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">About</a>
+		<a href="/my_website/#works" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Works</a>
+		<a href="/my_website/#services" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Services</a>
+		<a href="/my_website/#media" class="mobile-link text-slate-600 font-medium py-2 border-b border-slate-50">Media</a>
+		<a href="/my_website/#contact" class="mobile-link text-slate-600 font-medium py-2">Contact</a>
+	  </div>
+	</div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="pt-28 pb-16 bg-slate-50">
+  <div class="container mx-auto px-6">
+	<div class="max-w-5xl mx-auto">
+	  <div class="mb-6 flex items-center gap-3 text-sm text-slate-500">
+		<a href="/my_website/#works" class="hover:text-blue-600 transition-colors flex items-center gap-1">
+		  <i data-lucide="arrow-left" class="w-4 h-4"></i>
+		  Back to Works
+		</a>
+		<span class="text-slate-300">/</span>
+		<span class="uppercase tracking-wide text-blue-600 font-semibold">business</span>
+	  </div>
+
+	  <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
+		<div class="relative h-72">
+		  
+		  <img src="/my_website/assets/img/seibu.jpg" alt="野々市市西部中央土地区画整理組合webサイト" class="w-full h-full object-cover">
+		  <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent"></div>
+		  <div class="absolute bottom-6 left-6 right-6 text-white">
+			<p class="text-sm font-semibold uppercase tracking-wide text-blue-100 mb-2">business</p>
+			<h1 class="text-3xl md:text-4xl font-extrabold leading-tight">野々市市西部中央土地区画整理組合webサイト</h1>
+		  </div>
+		</div>
+
+		<div class="p-8 space-y-8">
+		  <div class="flex flex-wrap gap-2">
+			
+			<span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-semibold">webサイト</span>
+			
+			<span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-semibold">撮影</span>
+			
+			<span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-semibold">ディレクション</span>
+			
+			<span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-semibold">保守・管理</span>
+			
+		  </div>
+
+		  <article class="prose max-w-none prose-slate prose-lg">
+			<p>野々市市西部中央土地区画整理組合の<a href="https://seibu-chuou.info">公式Webサイト</a>を構築しました。企画、情報設計、写真撮影、デザイン、実装、公開後の保守までを一貫して担当し、土地区画整理事業の進捗や手続き情報が“分かりやすく・信頼して見られる”サイトづくりを実現しています。</p>
+
+<p>土地区画整理事業は専門性が高く、住民にとって理解しづらい領域です。そこで、組合からのヒアリングを重ね、まず“住民が何を知りたいのか”を整理。事業の全体像、換地の流れ、公告・図面、各種手続きなど、必要な情報を段階的に理解できる構成を設計しました。</p>
+
+<p>撮影では、整備が進むエリアの現地風景や、図面・資料といった無機質な情報を補完する文脈的な写真を撮影し、サイト全体に「事業が前に進んでいる実感」を与えるビジュアルを組み込みました。</p>
+
+<p>デザインは行政情報の堅さを保ちつつ、アイコンや余白、構造化されたレイアウトで“迷わず使える”ことを最優先に最適化。情報更新を円滑に行うため、CMSの導線や掲載手順も整備しました。公開後も保守管理を継続し、セキュリティ、コンテンツ更新、改善提案など、事業完了まで伴走しています。</p>
+
+<p>また、デザインしたロゴは同区画内の随所にある案内看板にも採用されております。</p>
+
+<p>単なるWeb制作ではなく、「地域の未来づくりを支える情報基盤」として、精度と信頼性を重視したプロジェクトです。
+野々市市西部中央土地区画整理組合webサイトです。</p>
+
+		  </article>
+
+		  <div class="grid md:grid-cols-3 gap-6 items-center border-t border-slate-100 pt-6">
+			<div class="md:col-span-2">
+			  <h3 class="text-lg font-bold text-slate-900 mb-2">プロジェクト概要</h3>
+			  <p class="text-slate-600 text-sm leading-relaxed">
+				野々市市西部中央土地区画整理組合の公式Webサイトを構築しました。企画、情報設計、写真撮影、デザイン、実装、公開後の保守までを一貫して担当し、土地区画整理事業の進捗や手続き情報が“分かりやすく・信頼して見られる”サイトづくりを実現しています。
+
+			  </p>
+			</div>
+			<div class="bg-slate-50 border border-slate-100 rounded-xl p-4">
+			  <div class="flex items-center gap-2 mb-3 text-slate-700">
+				<i data-lucide="info" class="w-5 h-5 text-blue-600"></i>
+				<span class="font-semibold text-sm">カテゴリ</span>
+			  </div>
+			  <p class="text-slate-600 text-sm mb-4">business</p>
+			  <a href="/my_website/#contact" class="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:gap-3 transition-all">
+				この案件に関する相談をする
+				<i data-lucide="arrow-right" class="w-4 h-4"></i>
+			  </a>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-500 py-8 border-t border-slate-800">
+	<div class="container mx-auto px-6 text-center text-sm">
+	  <p>&copy; 2025 KAZUNOBU IKAGAWA All Rights Reserved.</p>
+	</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/my_website/assets/js/main.js"></script>
+  <script>
+	// Initialize Icons
+	lucide.createIcons();
+  </script>
+</body>
+</html>
