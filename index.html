@@ -114,19 +114,50 @@ layout: default
 	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="business">Business</button>
 	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="community">Community</button>
 	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="dev">Personal Dev</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="地方議会">地方議会</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="Civic Tech">Civic Tech</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="Coworking">Coworking</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="Workshop">Workshop</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="その他">その他</button>
 	</div>
 
 	<!-- Works Grid -->
-	{% assign works_all = site.works | sort: "order" %}
-	{% assign works = works_all | slice: 0, 6 %}
+	{% assign works_sorted = site.works | sort: "date" | reverse %}
+	{% assign categories = "business|community|dev|地方議会|Civic Tech|Coworking|Workshop|その他" | split: "|" %}
+	{% assign selected = '' | split: '' %}
+	{% assign selected_urls = '' | split: '' %}
+	{% assign max_items = 6 %}
+
+	{% for cat in categories %}
+	  {% assign cat_items = works_sorted | where: "category", cat %}
+	  {% assign item = cat_items | first %}
+	  {% if item %}
+		{% assign selected = selected | push: item %}
+		{% assign selected_urls = selected_urls | push: item.url %}
+	  {% endif %}
+	{% endfor %}
+
+	{% if selected.size < max_items %}
+	  {% for w in works_sorted %}
+		{% unless selected_urls contains w.url %}
+		  {% assign selected = selected | push: w %}
+		  {% assign selected_urls = selected_urls | push: w.url %}
+		{% endunless %}
+		{% if selected.size >= max_items %}
+		  {% break %}
+		{% endif %}
+	  {% endfor %}
+	{% endif %}
+
 	<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-	  {% for work in works %}
+	  {% for work in selected %}
 	  {% assign summary = work.excerpt | strip_html | default: work.content | markdownify | strip_html %}
+	  {% assign work_image = work.image | relative_url %}
 	  <div class="work-item group bg-white rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-category="{{ work.category }}">
 		<a href="{{ work.url | relative_url }}" class="block h-full">
 		  <div class="relative h-48 overflow-hidden">
 			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
-			<img src="{{ work.image }}" alt="{{ work.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+			<img src="{{ work_image }}" alt="{{ work.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
 		  </div>
 		  <div class="p-6">
 			<div class="flex justify-between items-start mb-2">

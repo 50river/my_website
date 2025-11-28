@@ -16,15 +16,29 @@ title: "Works"
 	  </a>
 	</div>
 
+	<!-- Filter Buttons -->
+	<div class="flex justify-center gap-4 mb-10 flex-wrap" id="work-filters">
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-slate-800 text-white shadow-lg" data-filter="all">All</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="business">Business</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="community">Community</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="dev">Personal Dev</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="地方議会">地方議会</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="Civic Tech">Civic Tech</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="Coworking">Coworking</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="Workshop">Workshop</button>
+	  <button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-600 hover:bg-slate-100" data-filter="その他">その他</button>
+	</div>
+
 	{% assign works = site.works | sort: "order" %}
 	<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 	  {% for work in works %}
 	  {% assign summary = work.excerpt | strip_html | default: work.content | markdownify | strip_html %}
-	  <div class="group bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+	  {% assign work_image = work.image | relative_url %}
+	  <div class="work-item group bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1" data-category="{{ work.category }}">
 		<a href="{{ work.url | relative_url }}" class="block h-full">
 		  <div class="relative h-48 overflow-hidden">
 			<div class="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors z-10"></div>
-			<img src="{{ work.image }}" alt="{{ work.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+			<img src="{{ work_image }}" alt="{{ work.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
 		  </div>
 		  <div class="p-6 space-y-3">
 			<div class="flex justify-between items-start">

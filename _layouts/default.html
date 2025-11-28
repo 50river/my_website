@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ site.title }}</title>
-  <!-- Tailwind CSS (Play CDN for簡易読み込み) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS (Typography含む) -->
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
@@ -13,6 +13,16 @@
 	/* Custom styles if needed */
 	.fade-in { animation: fadeIn 0.5s ease-in; }
 	@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+	/* 読み物内リンクを見やすく */
+	.prose a {
+	  color: #2563eb;
+	  text-decoration: underline;
+	  text-decoration-thickness: 2px;
+	  text-underline-offset: 3px;
+	}
+	.prose a:hover {
+	  color: #1d4ed8;
+	}
   </style>
 </head>
 <body class="bg-slate-50 font-sans text-slate-800">
